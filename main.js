@@ -10,7 +10,7 @@ alertForm.addEventListener(`submit`, function(event){
 })
 
 
-// Part 2: Sandwich builder (꼭 발표할 것. 왠지 정답은 맞은데 for가 필요없다고 한 의도는 무엇인가. toString()쓰는 거 맞나? 사이에 스페이스를 두는 건 가능한가?)
+// Part 2: Sandwich builder (queryAll 이용한 for loop가 가장 효율적. 원 의도는 각 query였음... 게다가 space넣고 싶었으면 html의 value 내 str에게 띄어쓰기 넣으면 된 거였음...)
 
 let sandwichform = document.querySelector(`#sandwich`)
 let ingredients = document.querySelectorAll(`#ingredient input`)
@@ -47,7 +47,15 @@ hairForm.addEventListener(`submit`, function(event){
     }   else if (long.checked === false && short.checked === false){
         alert (`Please choose the length of your hair.`)
     }
+
+    date.value = ``
+    cutter.value = ``
+    long.value = ``
+    short.value = ``
+
 })
+
+// let hairLength = shortHairInput.checked ? `Short` : `Long`
 
 // Part 4: Create account
 
